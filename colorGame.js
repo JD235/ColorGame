@@ -9,7 +9,7 @@ var resetButton = document.querySelector("#reset");
 var modeButtons = document.querySelectorAll(".mode");
 var footer = document.querySelector("footer");
 var dropDown = document.querySelector(".dropdown-toggle");
-var wrongAudio = new Audio("Wrong.mp3");
+var wrongAudio = new Audio("WRONG.mp3");
 var CorrectAudio = new Audio("CORRECT1.mp3");
 var ClickAudio = new Audio("CLICK1.mp3");
 
