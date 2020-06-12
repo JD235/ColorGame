@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1.0">
+    <title>Color Game</title>
+
+    <script
+			  src="https://code.jquery.com/jquery-3.5.1.js"
+			  integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+              crossorigin="anonymous"></script>
+
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="colorGame.css">
+
+</head>
+<body>
+    <div class="main">
+        <div class="content">
+            <h1 class="text-center py-3">
+                The Great
+                <br>
+                <span id="colorDisplay">RGB</span>
+                <br>
+                Guessing Game 🤩</h1>
+            <div id="stripe" class="container-fluid text-center">
+                <button id="reset">New Colors</button>
+                <span id="message"></span>
+                    <button type="button" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Mode 👇
+                    </button>
+                    <div class="dropdown-menu">
+                      <button class="mode dropdown-item" href="#">Easy 🤪</button>
+                      <button class="mode dropdown-item" href="#">Hard 🤯</button>
+                    </div>
+            </div>
+            <div class="container pb-5" id="myCanvas">
+                <div class="row mt-5">
+                    <div class="col col-lg-4 col-sm-6 col-12">
+                        <div class="square mt-xl-0 mt-lg-0 mt-md-4 mt-sm-0 mt-4">
+        
+                        </div>
+                    </div>
+                    <div class="col col-lg-4 col-sm-6 col-12">
+                        <div class="square mt-xl-0 mt-lg-0 mt-md-4 mt-sm-0 mt-4">
+        
+                        </div>
+                    </div>
+                    <div class="col col-lg-4 col-sm-6 col-12">
+                        <div class="square mt-xl-0 mt-lg-0 mt-md-4 mt-sm-4 mt-4">
+        
+                        </div>
+                    </div>
+                    <div class="col col-lg-4 col-sm-6 col-12">
+                        <div class="square mt-xl-4 mt-lg-4 mt-md-4 mt-sm-4 mt-4">
+        
+                        </div>
+                    </div>
+                    <div class="col col-lg-4 col-sm-6 col-12">
+                        <div class="square mt-xl-4 mt-lg-4 mt-md-4 mt-sm-4 mt-4">
+        
+                        </div>
+                    </div>
+                    <div class="col col-lg-4 col-sm-6 col-12">
+                        <div class="square mt-xl-4 mt-lg-4 mt-md-4 mt-sm-4 mt-4">
+        
+                        </div>
+                    </div>
+        
+                </div>
+            </div>
+        </div>
+        <footer>
+            <h4 class="text-center mt-2"><a href="https://dhruvjasani.codes/" target="_blank">👉 Made with ❣️ JD 👈</a></h4>
+            <h6 class="text-center">&copy; All rights reserved</h6>
+        </footer>
+    </div>
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.bundle.min.js" integrity="sha384-1CmrxMRARb6aLqgBO7yyAxTOQE2AKb9GfXnEo760AUcUmFx3ibVJJAzGytlQcNXd" crossorigin="anonymous"></script>
+    <script src="colorGame.js"></script>
+
+</body>
+</html>
