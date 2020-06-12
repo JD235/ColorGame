@@ -14,4 +14,4 @@
 
 <h1 align="center">😆 Get Set Play !</h1>
 
-## NOTE: There may be issue in small device, in others working perfect.
+## NOTE: There may be issue in small devices, in others working perfect.
