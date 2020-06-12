@@ -1,6 +1,6 @@
 <p align="center">
-  <a href="">
-    <img alt="ColorGame" src="https://github.com/JD235/ColorGame/blob/master/RGB.png" width="60" />
+  <a href="https://jd235.github.io/ColorGame/">
+    <img alt="ColorGame" src="https://github.com/JD235/ColorGame/blob/master/RGB.png" width="80" />
   </a>
 </p>
 <h1 align="center">🤩 The RGB Color Guessing Game</h1>
