@@ -1,4 +1,4 @@
-<h1 align="center">The RGB Color Game 🤩</h1>
+<h1 align="center">🤩 The RGB Color Game</h1>
 
 ## 🤔 How to play ?
 
@@ -7,4 +7,4 @@
 3. If your guess is wrong, you have to try again until you select correct answer.
 4. There are two Modes Easy and Hard, it's up to you what mode you wanna play !
 
-<h1>😆 Get Set Play !</h1>
+<h1 align="center">😆 Get Set Play !</h1>
