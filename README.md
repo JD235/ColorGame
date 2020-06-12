@@ -13,3 +13,5 @@
 4. There are two Modes Easy and Hard, it's up to you what mode you wanna play !
 
 <h1 align="center">😆 Get Set Play !</h1>
+
+## NOTE: There may be issue in small device, in others working perfect.
