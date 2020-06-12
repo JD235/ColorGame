@@ -10,8 +10,8 @@ var modeButtons = document.querySelectorAll(".mode");
 var footer = document.querySelector("footer");
 var dropDown = document.querySelector(".dropdown-toggle");
 var wrongAudio = new Audio("WRONG.mp3");
-var CorrectAudio = new Audio("CORRECT1.mp3");
-var ClickAudio = new Audio("CLICK1.mp3");
+var correctAudio = new Audio("CORRECT1.mp3");
+var clickAudio = new Audio("CLICK1.mp3");
 
 init();
 
@@ -23,7 +23,7 @@ function init(){
 }
 
 dropDown.addEventListener("click", function(){
-    ClickAudio.play();
+    clickAudio.play();
 });
 
 function setupModeButtons(){
@@ -55,7 +55,7 @@ function setupSquares(){
                changeColor(clickedColor);
                h1.style.backgroundColor = clickedColor;
                footer.style.backgroundColor = clickedColor;
-               CorrectAudio.play();
+               correctAudio.play();
                resetButton.textContent = "Play Again? 😍"
            } else {
             this.style.backgroundColor = "#232323";
@@ -85,7 +85,7 @@ function reset(){
     footer.style.backgroundColor = "steelblue";
     messageDisplay.textContent = "";
     resetButton.textContent = "New Colors 🧐"
-    ClickAudio.play();
+    clickAudio.play();
 }
 
 // easyBtn.addEventListener("click", function(){
