@@ -1,9 +1,9 @@
 <p align="center">
-  <a href="https://www.gatsbyjs.org">
-    <img alt="Gatsby" src="https://github.com/JD235/ColorGame/blob/master/RGB.png" width="60" />
+  <a href="">
+    <img alt="ColorGame" src="https://github.com/JD235/ColorGame/blob/master/RGB.png" width="60" />
   </a>
 </p>
-<h1 align="center">🤩 The RGB Color Game</h1>
+<h1 align="center">🤩 The RGB Color Guessing Game</h1>
 
 ## 🤔 How to play ?
 
