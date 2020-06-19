@@ -15,8 +15,10 @@ var clickAudio = new Audio("CLICK1.mp3");
 var roundTracker = document.querySelector("#roundtracker");
 var numInput = document.querySelector("input");
 var roundCompleted = document.querySelector("#roundcompleted");
+var scoreTracker = document.querySelector("#scoretracker");
 var winnningScore = 3;
 var roundOver = 0;
+var totalScore = 0;
 var gameOver = false;
 
 init();
@@ -65,16 +67,22 @@ function setupSquares(){
                    correctAudio.play();
                     roundOver++;
                     roundCompleted.textContent = roundOver;
+                    totalScore+=10;
+                    scoreTracker.textContent = totalScore;
                     if(roundOver === winnningScore){
-                        alert("Game Over");
-                        roundCompleted.textContent = 0;
+                        alert("Game Over!" + "\n\nTotal Rounds Played: " + roundOver + "\n\nTotal Score: " + totalScore);
                         roundOver = 0;
+                        roundCompleted.textContent = roundOver;
+                        totalScore = 0;
+                        scoreTracker.textContent = totalScore;
                         gameOver = true;
                     }  
                     reset();
                } else {
                 this.style.backgroundColor = "#232323";
                 messageDisplay.textContent = "InCorrect! 🥺";
+                totalScore-=2;
+                scoreTracker.textContent = totalScore;
                 wrongAudio.play();
                }
             });
