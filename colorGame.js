@@ -12,12 +12,18 @@ var dropDown = document.querySelector(".dropdown-toggle");
 var wrongAudio = new Audio("WRONG.mp3");
 var correctAudio = new Audio("CORRECT1.mp3");
 var clickAudio = new Audio("CLICK1.mp3");
+var roundTracker = document.querySelector("#roundtracker");
+var numInput = document.querySelector("input");
+var roundCompleted = document.querySelector("#roundcompleted");
+var winnningScore = 3;
+var roundOver = 0;
+var gameOver = false;
 
 init();
 
 function init(){
     //mode buttons
-    setupModeButtons();
+    setupModeButtons();  
     setupSquares();
     reset();
 }
@@ -44,26 +50,36 @@ function setupModeButtons(){
 }
 
 function setupSquares(){
-    for(var i = 0; i<squares.length; i++){
-        //color click
-        squares[i].addEventListener("click", function(){
-           //grab the color
-           var clickedColor = this.style.backgroundColor;
-           //compare the color 
-           if (clickedColor === pickedColor) {
-               messageDisplay.textContent = "Correct! 🥳";
-               changeColor(clickedColor);
-               h1.style.backgroundColor = clickedColor;
-               footer.style.backgroundColor = clickedColor;
-               correctAudio.play();
-               resetButton.textContent = "Play Again? 😍"
-           } else {
-            this.style.backgroundColor = "#232323";
-            messageDisplay.textContent = "InCorrect! 🥺";
-            wrongAudio.play();
-           }
-        });
-    };
+    if(!gameOver){
+        for(var i = 0; i<squares.length; i++){
+            //color click
+            squares[i].addEventListener("click", function(){
+               //grab the color
+               var clickedColor = this.style.backgroundColor;
+               //compare the color 
+               if (clickedColor === pickedColor) {
+                   messageDisplay.textContent = "Correct! 🥳";
+                   changeColor(clickedColor);
+                   h1.style.backgroundColor = clickedColor;
+                   footer.style.backgroundColor = clickedColor;
+                   correctAudio.play();
+                    roundOver++;
+                    roundCompleted.textContent = roundOver;
+                    if(roundOver === winnningScore){
+                        alert("Game Over");
+                        roundCompleted.textContent = 0;
+                        roundOver = 0;
+                        gameOver = true;
+                    }  
+                    reset();
+               } else {
+                this.style.backgroundColor = "#232323";
+                messageDisplay.textContent = "InCorrect! 🥺";
+                wrongAudio.play();
+               }
+            });
+        };
+    } 
 }
 
 function reset(){
@@ -153,3 +169,14 @@ function randomColor(){
      //rgb(r, g, b);
      return "rgb(" + r + ", " + g + ", " + b + ")";
 };
+
+numInput.addEventListener("change", function(){
+    if(this.value < 0){
+        alert("Enter valid number");
+    }
+    else{
+        roundTracker.textContent = this.value;
+        winnningScore = Number(numInput.value);
+        reset();
+    }
+})
