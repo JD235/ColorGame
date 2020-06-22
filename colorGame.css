@@ -10,8 +10,42 @@ body{
 .content{
     padding-bottom: 5rem;
 }
+.topname{
+    background: #000428;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom, #004e92, #000428);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, #004e92, #000428); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    
+}
+.btn{
+    color: white;
+    border: 1px solid white;
+    border-radius: 1rem;
+}
+.btn:hover{
+    color: white;
+    background: #000428;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom, #004e92, #000428);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, #004e92, #000428); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        outline-style: none;
+}
+.card{
+    background-color: transparent;
+    border: 2px solid white;
+    padding-left:0;
+    padding-right:0;
+    border-radius: 2rem;
+}
+.card-header:first-child{
+    border: 2px solid white;
+    border-radius: 1.79rem 1.79rem 0 0;
+}
+.card-title{
+    text-align: left;
+}
+li{
+    line-height: 2;
+}
 footer{
-    background-color: steelblue;
     position: absolute;
     bottom: 0;
     width: 100%;
@@ -34,6 +68,30 @@ h1{
     transition: background-color 0.5s;
     -webkit-transition: background-color 0.5s;
     -moz-transition: background-color 0.5s;
+}
+#upperstripe{
+    background-color: steelblue;
+    color: white;
+    font-weight: 700;
+    letter-spacing: 0.1rem;
+    height: 35px;
+}
+.rou input{
+    background-color: steelblue;
+    border: none;
+    color: white;
+    font-weight: 700;
+    text-align: center;
+    letter-spacing: 0.1rem;
+    height: 100%;
+    width: 190px;
+}
+.nick input{
+    color: white;
+    background-color: transparent;
+    border-radius:  1rem;
+    letter-spacing: 0.2rem;
+    width: 270px;
 }
 #stripe{
     color: black;
@@ -92,6 +150,12 @@ a:hover{
   @media (max-width: 575.98px) { 
     #stripe{
         height: 50px;
+    }
+    #colorDisplay{
+        font-size: 35px;
+    }
+    #upperstripe{
+        height: 100px;
     }
     }
 

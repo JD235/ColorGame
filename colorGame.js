@@ -12,8 +12,11 @@ var dropDown = document.querySelector(".dropdown-toggle");
 var wrongAudio = new Audio("WRONG.mp3");
 var correctAudio = new Audio("CORRECT1.mp3");
 var clickAudio = new Audio("CLICK1.mp3");
+var nickInput = document.querySelector("#nickname");
+var playBtn = document.querySelector("#playBtn");
+var nickDisplay = document.querySelector("#nickDisplay");
 var roundTracker = document.querySelector("#roundtracker");
-var numInput = document.querySelector("input");
+var numInput = document.querySelector("#rounds");
 var roundCompleted = document.querySelector("#roundcompleted");
 var scoreTracker = document.querySelector("#scoretracker");
 var winnningScore = 3;
@@ -65,9 +68,10 @@ function setupSquares(){
                    h1.style.backgroundColor = clickedColor;
                    footer.style.backgroundColor = clickedColor;
                    correctAudio.play();
-                    roundOver++;
+                    
+                   roundOver++;
                     roundCompleted.textContent = roundOver;
-                    totalScore+=10;
+                    totalScore+=6;
                     scoreTracker.textContent = totalScore;
                     if(roundOver === winnningScore){
                         alert("Game Over!" + "\n\nTotal Rounds Played: " + roundOver + "\n\nTotal Score: " + totalScore);
@@ -76,9 +80,11 @@ function setupSquares(){
                         totalScore = 0;
                         scoreTracker.textContent = totalScore;
                         gameOver = true;
-                    }  
+                    } 
+
                     reset();
                } else {
+                   var m = 0;
                 this.style.backgroundColor = "#232323";
                 messageDisplay.textContent = "InCorrect! 🥺";
                 totalScore-=2;
@@ -110,6 +116,7 @@ function reset(){
     messageDisplay.textContent = "";
     resetButton.textContent = "New Colors 🧐"
     clickAudio.play();
+    numInput.value = "";
 }
 
 // easyBtn.addEventListener("click", function(){
@@ -179,7 +186,7 @@ function randomColor(){
 };
 
 numInput.addEventListener("change", function(){
-    if(this.value < 0){
+    if(this.value <= 0){
         alert("Enter valid number");
     }
     else{
@@ -188,3 +195,17 @@ numInput.addEventListener("change", function(){
         reset();
     }
 })
+
+// playBtn.onclick = function (){
+//     console.log(nickInput.value)
+//     localStorage.setItem(nickInput.value);
+//     localStorage.getItem(nickInput.value)
+//     location.reload();
+//     nickDisplay.innerHTML = `${nickInput.value}`;
+// }
+
+
+// addEventListener("click", function(){
+//     nickDisplay.innerHTML =  nickInput.value;
+//     reset();
+// })

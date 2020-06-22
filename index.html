@@ -13,88 +13,49 @@
 
 </head>
 <body>
+    
+
     <div class="main">
         <div class="content">
-            <h1 class="text-center py-3">
-                The Great
-                <br>
-                <span id="colorDisplay">RGB</span>
-                <br>
-                Guessing Game 🤩</h1>
-            <div class="container-fluid text-center">
-                <div class="row" id="stripe">
-                    <div class="col col-sm-4 col-5">
-                        <button id="reset">New Colors</button>
+            <h1 class="text-center py-3 topname"><strong>The Great RGB Color<br> Guessing Game 🤩</strong></h1> 
+            <div class="container-lg">
+                <div class="card text-center my-5">
+                    <div class="card-header">
+                      <h2>How to Play ? 🤔</h2>
                     </div>
-                    <div class="col col-sm-4">
-                        <span id="message" class="ml-xl-0 ml-lg-0 ml-md-0 ml-sm-0 ml-n4"></span>
+                    <div class="card-body">
+                      <h5 class="card-title">
+                        <ol>
+                            <li>Choose the number of rounds you want to play. It is set to 3 as default.</li>
+                            <li>RGB Color syntax will be given to you.</li>
+                            <li>According to the number given in the RGB you have to guess the right Color.
+                                for eg. RGB(255, 255, 255) will give you white color and the range is
+                                between(0 - 255). R = Red, G = Green, B = Blue.
+                            </li>
+                            <li>If one guessed the color correct player will get +6 points!</li>
+                            <li>If one guessed the color wrong player will lose -2 points!</li>
+                            <li>There are two Modes Easy and Hard, it's up to the player what mode to play !</li>
+                        </ol>
+                      </h5>
+                      <h2 class="card-text">Get Set Play ! 😆</h2>
+                      <h2 class="nick mt-3">
+                          <input class="text-center py-1" type="text" name="nickname" id="nickname" placeholder="NICKNAME">
+                      </h2>
+                      <a href="gamePlay.html" class="btn mt-3" id="playBtn"><h5>Let's Play 🤘</h5></a>
                     </div>
-                    <div class="col col-sm-4 col-5">
-                        <button type="button" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Mode 👇
-                            </button>
-                            <div class="dropdown-menu">
-                              <button class="mode dropdown-item" href="#">Easy 🤪</button>
-                              <button class="mode dropdown-item" href="#">Hard 🤯</button>
-                            </div>
-                    </div>
-                </div>
-            </div>
-            <div class="container pb-5" id="myCanvas">
-                <div class="row mt-5">
-                    <div class="col col-lg-4 col-sm-6 col-12">
-                        <div class="square mt-xl-0 mt-lg-0 mt-md-4 mt-sm-0 mt-4">
-        
-                        </div>
-                    </div>
-                    <div class="col col-lg-4 col-sm-6 col-12">
-                        <div class="square mt-xl-0 mt-lg-0 mt-md-4 mt-sm-0 mt-4">
-        
-                        </div>
-                    </div>
-                    <div class="col col-lg-4 col-sm-6 col-12">
-                        <div class="square mt-xl-0 mt-lg-0 mt-md-4 mt-sm-4 mt-4">
-        
-                        </div>
-                    </div>
-                    <div class="col col-lg-4 col-sm-6 col-12">
-                        <div class="square mt-xl-4 mt-lg-4 mt-md-4 mt-sm-4 mt-4">
-        
-                        </div>
-                    </div>
-                    <div class="col col-lg-4 col-sm-6 col-12">
-                        <div class="square mt-xl-4 mt-lg-4 mt-md-4 mt-sm-4 mt-4">
-        
-                        </div>
-                    </div>
-                    <div class="col col-lg-4 col-sm-6 col-12">
-                        <div class="square mt-xl-4 mt-lg-4 mt-md-4 mt-sm-4 mt-4">
-        
-                        </div>
-                    </div>
-        
-                </div>
-            </div>
-            <div class="row container-fluid text-center justify-content-center">
-                <div class="col col-sm-4 col-12">
-                    <input type="number" placeholder="ENTER ROUNDS" id="name">
-                </div>
-                <div class="col col-sm-4 col-6">
-                    ROUND: <span id="roundcompleted">0</span> - <span id="roundtracker">3</span>
-                </div>
-                <div class="col col-sm-4 col-6">
-                    SCORE: <span id="scoretracker">0</span>
-                </div>
+                  </div>
             </div>
         </div>
-        <footer class="text-center">
+
+
+        <footer class="text-center topname">
             <h4 class="mt-2"><a href="https://dhruvjasani.codes/" target="_blank">👉 Made with ❣️ JD 👈</a></h4>
             <a href="https://github.com/JD235/ColorGame"target="_blank"><i class="fa fa-github-square fa-2x" aria-hidden="true"></i></a>
         </footer>
     </div>
+    
+
 
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.bundle.min.js" integrity="sha384-1CmrxMRARb6aLqgBO7yyAxTOQE2AKb9GfXnEo760AUcUmFx3ibVJJAzGytlQcNXd" crossorigin="anonymous"></script>
     <script src="colorGame.js"></script>
-
 </body>
-</html>
