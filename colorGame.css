@@ -3,9 +3,12 @@ body{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     color: white;
 }
-.boddy,a{
+.boddy{
     animation: pulse 15s infinite;
     -webkit-animation: pulse 15s infinite alternate; /* Chrome and Safari */
+}
+.foter a{
+    color: black;
 }
 
 @keyframes pulse {
