@@ -86,7 +86,7 @@ function setupSquares(){
                         totalScore = 0;
                         scoreTracker.textContent = totalScore;
                         gameOver = true;
-                        resetButton.textContent = "Play Again? 😍"
+                        resetButton.textContent = "Play Again?😍"
                     }
                     
                     // resetButton.addEventListener("click", function(){
