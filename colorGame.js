@@ -89,14 +89,14 @@ function setupSquares(){
                         resetButton.textContent = "Play Again? 😍"
                     }
                     
-                    resetButton.addEventListener("click", function(){
-                        if(resetButton.textContent = "Play Again ?"){
-                            for(var i = 0; i<squares.length; i++){
-                                squares[i].style.display = "block";
-                            }
-                            won.textContent = ""; 
-                        }
-                    }) 
+                    // resetButton.addEventListener("click", function(){
+                    //     if(resetButton.textContent = "Play Again ?"){
+                    //         for(var i = 0; i<squares.length; i++){
+                    //             squares[i].style.display = "block";
+                    //         }
+                    //         won.textContent = ""; 
+                    //     }
+                    // }) 
                     
                     
                } else {
