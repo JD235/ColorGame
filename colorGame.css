@@ -186,5 +186,9 @@ a:hover{
         margin-top: 3rem;
         font-size: 1.7rem;
     }
+    .square{
+        height: 6.5rem;
+        width: 6.5rem;
+    }
     }
 
