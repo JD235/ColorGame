@@ -3,14 +3,14 @@ body{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     color: white;
 }
-.boddy{
+.boddy,a{
     animation: pulse 15s infinite;
     -webkit-animation: pulse 15s infinite alternate; /* Chrome and Safari */
 }
 
 @keyframes pulse {
-    0%   {background: rgb(50, 167, 206); color: white;}
-      33%  {background: rgb(17, 141, 17); color: white;}
+    0%   {background: rgb(70, 209, 255); color: black;}
+      33%  {background: rgb(74, 233, 74); color: black;}
       66%  {background: rgb(226, 226, 0); color: black;}
       100% {background: rgb(255, 145, 0); color: black;}
    }
