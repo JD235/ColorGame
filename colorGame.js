@@ -77,7 +77,7 @@ function setupSquares(){
                     scoreTracker.textContent = totalScore;
                     if(roundOver === winnningScore){
                         // alert("Game Over!" + "\n\nTotal Rounds Played: " + roundOver + "\n\nTotal Score: " + totalScore);
-                        won.textContent = "\r\n\r\n" + "Your Total Score: " + totalScore + " 🥳" + "\r\n\r\n" + "Total Rounds Played: " + roundOver;
+                        won.textContent = "\r\n" + "Game Over! 🤝\r\n\r\n" + "Your Total Score: " + totalScore + " 🥳" + "\r\n\r\n" + "Total Rounds Played: " + roundOver;
                         for(var i = 0; i<squares.length; i++){
                             squares[i].style.display = "none";
                         }
