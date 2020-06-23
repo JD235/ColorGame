@@ -19,6 +19,7 @@ var roundTracker = document.querySelector("#roundtracker");
 var numInput = document.querySelector("#rounds");
 var roundCompleted = document.querySelector("#roundcompleted");
 var scoreTracker = document.querySelector("#scoretracker");
+var won = document.querySelector(".won");
 var winnningScore = 3;
 var roundOver = 0;
 var totalScore = 0;
@@ -64,27 +65,41 @@ function setupSquares(){
                //compare the color 
                if (clickedColor === pickedColor) {
                    messageDisplay.textContent = "Correct! 🥳";
-                   changeColor(clickedColor);
+                //    changeColor(clickedColor);
+                    reset();
                    h1.style.backgroundColor = clickedColor;
                    footer.style.backgroundColor = clickedColor;
                    correctAudio.play();
-                    
+                   
                    roundOver++;
                     roundCompleted.textContent = roundOver;
                     totalScore+=6;
                     scoreTracker.textContent = totalScore;
                     if(roundOver === winnningScore){
-                        alert("Game Over!" + "\n\nTotal Rounds Played: " + roundOver + "\n\nTotal Score: " + totalScore);
+                        // alert("Game Over!" + "\n\nTotal Rounds Played: " + roundOver + "\n\nTotal Score: " + totalScore);
+                        won.textContent = "\r\n\r\n" + "Your Total Score: " + totalScore + " 🥳" + "\r\n\r\n" + "Total Rounds Played: " + roundOver;
+                        for(var i = 0; i<squares.length; i++){
+                            squares[i].style.display = "none";
+                        }
                         roundOver = 0;
                         roundCompleted.textContent = roundOver;
                         totalScore = 0;
                         scoreTracker.textContent = totalScore;
                         gameOver = true;
-                    } 
-
-                    reset();
+                        resetButton.textContent = "Play Again? 😍"
+                    }
+                    
+                    resetButton.addEventListener("click", function(){
+                        if(resetButton.textContent = "Play Again ?"){
+                            for(var i = 0; i<squares.length; i++){
+                                squares[i].style.display = "block";
+                            }
+                            won.textContent = ""; 
+                        }
+                    }) 
+                    
+                    
                } else {
-                   var m = 0;
                 this.style.backgroundColor = "#232323";
                 messageDisplay.textContent = "InCorrect! 🥺";
                 totalScore-=2;
@@ -117,6 +132,7 @@ function reset(){
     resetButton.textContent = "New Colors 🧐"
     clickAudio.play();
     numInput.value = "";
+    won.textContent = "";
 }
 
 // easyBtn.addEventListener("click", function(){
@@ -196,16 +212,10 @@ numInput.addEventListener("change", function(){
     }
 })
 
-// playBtn.onclick = function (){
-//     console.log(nickInput.value)
-//     localStorage.setItem(nickInput.value);
-//     localStorage.getItem(nickInput.value)
-//     location.reload();
-//     nickDisplay.innerHTML = `${nickInput.value}`;
-// }
+function passNickName(){
+    var nickName = nickInput.value;
+    localStorage.setItem("nickValue", nickName);
+    return false;
+}
 
-
-// addEventListener("click", function(){
-//     nickDisplay.innerHTML =  nickInput.value;
-//     reset();
-// })
+nickDisplay.innerHTML = localStorage.getItem("nickValue");

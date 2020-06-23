@@ -13,8 +13,7 @@ body{
 .topname{
     background: #000428;  /* fallback for old browsers */
     background: -webkit-linear-gradient(to bottom, #004e92, #000428);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to bottom, #004e92, #000428); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    
+    background: linear-gradient(to bottom, #004e92, #000428); /*W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+*/
 }
 .btn{
     color: white;
@@ -29,7 +28,7 @@ body{
         outline-style: none;
 }
 .card{
-    background-color: transparent;
+    background-color:transparent;
     border: 2px solid white;
     padding-left:0;
     padding-right:0;
@@ -44,6 +43,10 @@ body{
 }
 li{
     line-height: 2;
+}
+.won{
+    white-space: pre;
+    font-size: 3rem;
 }
 footer{
     position: absolute;
@@ -62,12 +65,13 @@ h1{
 }
 .square{
     text-align: center;
-    height: 16rem;
-    background: rgb(0, 136, 136);
-    border-radius: 9rem 9rem 3rem 3rem;
+    height: 18rem;
+    width: 18rem;
+    border-radius: 1rem;
     transition: background-color 0.5s;
     -webkit-transition: background-color 0.5s;
     -moz-transition: background-color 0.5s;
+
 }
 #upperstripe{
     background-color: steelblue;
@@ -147,6 +151,7 @@ a:hover{
     color: white;
     text-decoration: none;
 }
+
   @media (max-width: 575.98px) { 
     #stripe{
         height: 50px;
@@ -156,6 +161,12 @@ a:hover{
     }
     #upperstripe{
         height: 100px;
+    }
+    .nicksize{
+        font-size: 30px;
+    }
+    .won{
+        font-size: 1.7rem;
     }
     }
 
