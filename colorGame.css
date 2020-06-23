@@ -9,6 +9,10 @@ body{
 }
 .foter a{
     color: black;
+    transition: 0.5s;
+}
+.foter a:hover{
+    transition: 0.5s;
 }
 
 @keyframes pulse {
