@@ -82,8 +82,8 @@ h1{
 }
 .square{
     text-align: center;
-    height: 18rem;
-    width: 18rem;
+    height: 11rem;
+    width: 11rem;
     border-radius: 1rem;
     transition: background-color 0.5s;
     -webkit-transition: background-color 0.5s;
