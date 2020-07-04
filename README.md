@@ -7,9 +7,12 @@
 
 ## 🤔 How to play ?
 
-1. RGB Color syntax will be given to you.
-2. According to number giving in the RGB you have to guess the right Color.
-3. If your guess is wrong, you have to try again until you select correct answer.
-4. There are two Modes Easy and Hard, it's up to you what mode you wanna play !
+
+1. Choose the number of rounds you want to play. It is set to 3 as default.
+2. RGB Color syntax will be given to you.
+3. According to the number given in the RGB you have to guess the right Color. for eg. RGB(255, 255, 255) will give you white color and the range is between(0 -      255). R = Red, G = Green, B = Blue.
+4. If one guessed the color correct player will get +6 points!
+5. If one guessed the color wrong player will lose -2 points!
+6. There are two Modes Easy and Hard, it's up to the player what mode to play !
 
 <h1 align="center">😆 Get Set Play !</h1>
